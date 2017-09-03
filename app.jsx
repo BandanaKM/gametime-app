@@ -55,7 +55,7 @@ function Application(props) {
         <Player name="Narinder Singh" score={35}>
         </div>
 
-        </div>
+        <div>
       </div>
     </div>
   );
