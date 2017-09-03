@@ -1,14 +1,14 @@
-function Application() {
+function Application(props) {
   return (
     <div className="scoreboard">
       <div className="header">
-        <h1>Scoreboard</h1>
+        <h1>{ props.title }</h1>
       </div>
     
       <div className="players">
         <div className="player">
           <div className="player-name">
-            Jim Hoskins
+            Bandana Kaur
           </div>
           <div className="player-score">
             <div className="counter">
@@ -21,7 +21,7 @@ function Application() {
     
         <div className="player">
           <div className="player-name">
-            Andrew Chalkey
+            Narinder Singh
           </div>
           <div className="player-score">
             <div className="counter">
@@ -36,4 +36,4 @@ function Application() {
   );
 }
 
-ReactDOM.render(<Application />, document.getElementById('container'));
+ReactDOM.render(<Application title="Game Timer"/>, document.getElementById('container'));
