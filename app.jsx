@@ -1,3 +1,21 @@
+PLAYERS = [
+  {
+    name: "Bandana Kaur",
+    score: 31,
+    id: 1,
+  },
+  {
+    name: "Narinder Singh",
+    score: 35,
+    id: 2,
+  },
+  {
+    name: "Narinder Singh",
+    score: 35,
+    id: 3,
+  }
+];
+
 function Header (props) {
   return (
     <div className="header">
@@ -10,20 +28,20 @@ Header.propTypes = {
   title: React.PropTypes.string.isRequired,
 }
 
-
-function Counter(props) {
-  return (    
-  <div className="counter">
-    <button className="counter-action decrement"> - </button>
-    <div className="counter-score"> 33 </div>
-    <button className="counter-action increment"> + </button>
-  </div>
-  )
-}
-
-Counter.propTypes = {
-  score: React.PropTypes.number.isRequired,
-}
+const Counter = React.createClass({
+  propTypes: {
+    score: React.PropTypes.number.isRequired,
+  },
+  render: function() {
+    return (
+      <div className="counter">
+        <button className="counter-action decrement"> - </button>
+        <div className="counter-score"> {this.props.score} </div>
+        <button className="counter-action increment"> + </button>
+      </div>
+   );
+  }
+})
 
 
 function Player(props) {
@@ -49,24 +67,32 @@ function Application(props) {
   return (
     <div className="scoreboard">
       <Header title={ props.title }/> 
-
+      
       <div className="players">
+        {props.players.map(function(player) {
+          return <Player={player.name} score={player.score} key={player.id}>
+        })}
         <Player name="Bandana Kaur" score={34}>
         <Player name="Narinder Singh" score={35}>
         </div>
 
-        </div>
+        <div>
       </div>
     </div>
   );
 }
 
 Application.propTypes = {
-  title: React.PropTypes.string
+  title: React.PropTypes.string,
+  players: React.PropTypes.arrayOf(React.PropTypes.shape({
+      name: React.PropTypes.string.isRequired, })).isRequired,
+      score: React.PropTypes.string.isRequired, })).isRequired,
+      id: React.PropTypes.number.isRequired,
+  })).isRequired,
 }
 
 Application.defaultProps = {
   title: "Scoreboard",
 }
 
-ReactDOM.render(<Application title="Game Timer"/>, document.getElementById('container'));
+ReactDOM.render(<Application title="Game Timer"/> player={PLAYERS}, document.getElementById('container'));
