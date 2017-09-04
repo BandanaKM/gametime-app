@@ -102,4 +102,4 @@ const Application = React.createClass({
 
 
 
-ReactDOM.render(<Application title="Game Timer"/> intialPlayers={PLAYERS}, document.getElementById('container'));
+ReactDOM.render(<Application title="Game Timer"/> initialPlayers={PLAYERS}, document.getElementById('container'));
