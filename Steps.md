@@ -16,3 +16,17 @@ we need an id though.
 bm-3_1-component-classes
 add state
 translate a functional component into a componenet class by using this since props is a property of the class itself, having the render method, and making proptypes a property of the object
+
+
+bm-3_2-state
+* we add getInitialState to our component class
+* we change props to state
+* we make sure props isn't being passed down from player anymore
+
+bm-3_3-updating state
+* we add an event to increment the score when someonepressed the button
+* we use setState, to take the current state to increment the score
+* this then tells the class to rerender itself. we need to use setState for this 
+* bind.this() in all component classes, it will automatically bind the method to the instance, so we don't need to do this for it. 
+* when using a component class, you don't need to use .bind to make sure a method is correctly bound to the instance
+* don't understand: <Counter initialScore={props.score}/> around 8:30
