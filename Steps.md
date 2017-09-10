@@ -45,3 +45,11 @@ onClick={function() {props.onChange(-1);}}>
 * for map, when we call .bind(this) to the function, it would call the same this that we call on our function, to the same this, outside
 * come back and review, especially
 * be able to trace the flow from counter to players to app, and notice the reason for the delta. 
+
+story:
+* a counter can change, add it to the propTypes. we can do this with an onClick and an anonymous function
+* player relays this up, another property that is a callback function to relay this information up to the application.
+* then we work our way up to the application, where player is instantiated and make this a property of our player.
+* we create onScoreChange as a function of the application, then it becomes a property. but we need to give it a delta and an index. 
+* we can't pass the index and the delta directly into onScoreChange for some reason, but we can pass it in through an anonymous function, pass this into map, pass this into onScoreChange
+* then change the score, and set the state 
