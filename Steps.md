@@ -35,3 +35,13 @@ bm-3_3-updating state
 bm-4_2-change-back-into-stateless-component
 * change counter back to a statless component
 * remove all the state methods from here, including the initial score that is being passed from props. 
+
+
+bm-4_3-communicating-events
+* implement new event that allow data to flow upwards through the application. 
+* we create an onChange property for counter, and give it an onClick hander
+onClick={function() {props.onChange(-1);}}>
+* we need this function to be a function that will invoke our props.onClick
+* for map, when we call .bind(this) to the function, it would call the same this that we call on our function, to the same this, outside
+* come back and review, especially
+* be able to trace the flow from counter to players to app, and notice the reason for the delta. 
