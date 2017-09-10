@@ -1,7 +1,7 @@
 PLAYERS = [
   {
     name: "Bandana Kaur",
-    score: 31,
+    score: 34,
     id: 1,
   },
   {
@@ -10,8 +10,8 @@ PLAYERS = [
     id: 2,
   },
   {
-    name: "Narinder Singh",
-    score: 35,
+    name: "Hazuri Kaur",
+    score: 46,
     id: 3,
   }
 ];
@@ -79,7 +79,7 @@ const Application = React.createClass({
   },
 
   getInitialState: function() {
-    returns: this.props.initialPlayers,
+    return: this.props.initialPlayers,
   },
 
   render: function() {

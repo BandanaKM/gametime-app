@@ -30,3 +30,8 @@ bm-3_3-updating state
 * bind.this() in all component classes, it will automatically bind the method to the instance, so we don't need to do this for it. 
 * when using a component class, you don't need to use .bind to make sure a method is correctly bound to the instance
 * don't understand: <Counter initialScore={props.score}/> around 8:30
+
+
+bm-4_2-change-back-into-stateless-component
+* change counter back to a statless component
+* remove all the state methods from here, including the initial score that is being passed from props. 
