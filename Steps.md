@@ -53,3 +53,9 @@ story:
 * we create onScoreChange as a function of the application, then it becomes a property. but we need to give it a delta and an index. 
 * we can't pass the index and the delta directly into onScoreChange for some reason, but we can pass it in through an anonymous function, pass this into map, pass this into onScoreChange
 * then change the score, and set the state 
+
+bm-4_4-building-the-statistics-component
+* build the statistics component. beware, anytime you do a table in a react component, it requires you to add a tbody and a thead
+* create a stats component, and a function that allows you to iterate over each player in the function. 
+* unlike map, reduce is an iterator function
+* 
