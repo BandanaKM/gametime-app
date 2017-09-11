@@ -68,3 +68,10 @@ bm-4_5-adding-players-to-the-scoreboard
 * proptypes, onAdd: as we add a player, we'll be notifying out application that we want to add a player with a specific name. 
 * create propTypes
 * finally, our last step here is to pass this up to our application saying that we have added a player. 
+
+
+bm-5-1-stopwatch-design
+* stopwatch ocmponenet, allows us to count seconds, and start stop, start and reset. 
+* make the timer, a simple counter in seconds. 
+* create a stateful component, called a stopwatch.
+*

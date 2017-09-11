@@ -19,7 +19,26 @@ PLAYERS = [
 var nextId: 4;
 
 
-const AddPlayerForm(React.) {
+const Stopwatch(React.createClass({
+  render: function() {
+    render(
+      <div className="stopwatch">
+        <h2>Stopwatch</Stopwatch>
+          <div className="stopwatch-time"></div>
+          <button>
+            Start
+          </button>
+          <button>
+            Resetting
+          </button>
+        </div> 
+      </div>
+    );
+  }
+});
+
+
+const AddPlayerForm(React.createClass) {
   propTypes: {
     onAdd: React.PropTypes.func.isRequired,
   },
@@ -84,6 +103,7 @@ function Header (props) {
     <div className="header">
       <Stats players={props.players}/>
       <h1>{ props.title }</h1>
+      <Stopwatch />
     </div>  
   );
 }
@@ -178,7 +198,7 @@ const Application = React.createClass({
     return (
       <div className="scoreboard">
         <Header title={this.props.title} player={this.state.players}/> 
-        
+
         <div className="players">
           {this.state.players.map(function(player) {
             return 
