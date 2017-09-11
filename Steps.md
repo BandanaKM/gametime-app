@@ -58,4 +58,13 @@ bm-4_4-building-the-statistics-component
 * build the statistics component. beware, anytime you do a table in a react component, it requires you to add a tbody and a thead
 * create a stats component, and a function that allows you to iterate over each player in the function. 
 * unlike map, reduce is an iterator function
-* 
+
+bm-4_5-adding-players-to-the-scoreboard
+* create a new form with a textfield to add the new player
+* forms are an interesting topic in react, because inputs in html are stateful 
+* create the form with the input fields in the AddPlayerForm component 
+* onSubmit: function(e)
+* onSubmit is a function that takes a submit event, e.preventDefault prevents it from posting to the page
+* proptypes, onAdd: as we add a player, we'll be notifying out application that we want to add a player with a specific name. 
+* create propTypes
+* finally, our last step here is to pass this up to our application saying that we have added a player. 
