@@ -20,16 +20,37 @@ var nextId: 4;
 
 
 const Stopwatch(React.createClass({
+
+  getInitialState: function() {
+    return {
+      running: false,
+    }
+  },
+
+  onStart: function() {
+    this.setState({running: true});
+  },
+
+  onStop: function() {
+    this.setState({running: false});
+  },
+
+  onReset: function() {
+    this.setState({running: true});
+  },
+
   render: function() {
     render(
+      const startStop;
       <div className="stopwatch">
         <h2>Stopwatch</Stopwatch>
-          <div className="stopwatch-time"></div>
-          <button>
-            Start
-          </button>
-          <button>
-            Resetting
+          <div className="stopwatch-time">0</div>
+            { this.state.running ? 
+              <button onClick={this.onStop}>Stop</button> 
+              : 
+              <button onClick={this.onStart}>Start/button }
+          <butto onClick={this.onReset}>
+            Reset
           </button>
         </div> 
       </div>

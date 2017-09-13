@@ -74,4 +74,9 @@ bm-5-1-stopwatch-design
 * stopwatch ocmponenet, allows us to count seconds, and start stop, start and reset. 
 * make the timer, a simple counter in seconds. 
 * create a stateful component, called a stopwatch.
-*
+* we'll need to use setInterval or setTimeout to keep time ticking;
+* we can do this by using different lifecycle methods - and keeping multiple pieces of state.
+
+
+bm-5-2
+* using a ternary operator. 
