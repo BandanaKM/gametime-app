@@ -87,3 +87,12 @@ bm-5-2
 * sets up things like timers, data fetching or anything we need to do. 
 * with componentDidMount, this will call onTick over and over again. 
 * componentWillUnmount: if you don't have this, the component will always be in memory. the setInterval keeps the componenet in memory and not be freed. we may have a memory leek. s
+
+
+bm-5-3
+* key design principle: managing state
+
+bm-5-4
+* in a real world, we'll use something to precompile before we deploy
+* webpack, compile our JSX and profile a module system like in Node. 
+
