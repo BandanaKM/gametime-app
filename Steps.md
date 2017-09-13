@@ -80,3 +80,10 @@ bm-5-1-stopwatch-design
 
 bm-5-2
 * using a ternary operator. 
+* need to create a method call to update the time.
+* repeated method call using setInterval, we can hook into key points into our component's lifecycle to set up and teardown functionality like this. 
+* onTick : the heart of the stopwatch
+* componentDidMount : as soon as the component exists in this page, we want to be notified by React.
+* sets up things like timers, data fetching or anything we need to do. 
+* with componentDidMount, this will call onTick over and over again. 
+* componentWillUnmount: if you don't have this, the component will always be in memory. the setInterval keeps the componenet in memory and not be freed. we may have a memory leek. s
