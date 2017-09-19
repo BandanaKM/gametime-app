@@ -32,9 +32,31 @@ bm-3_3-updating state
 * don't understand: <Counter initialScore={props.score}/> around 8:30
 
 
+bm-4-1
+
+key:
+* component can use the data passed to it, to determine the components passed to its children
+
+questions:
+* how are we defining certain events to manipulate the data, and implementing them as callback functions?
+* how does this callback pattern work?
+
+
 bm-4_2-change-back-into-stateless-component
 * change counter back to a statless component
 * remove all the state methods from here, including the initial score that is being passed from props. 
+
+questions:
+* what does a stateful component look like?
+* what does a stateless functional component look like? how are the patterns different?
+* how much stuff does the application component have at this point? title, players/ 
+* what is this whole getDefault props methods. 
+* why are players defined as state here?
+   a: because we can change things about a player, as well as information within a player like the score
+* does getInitialState always return an object?
+* what does the map property do
+  * a: need to have state here 
+* why did we change application to a class. because now application holds the state and we can cascade this from application down to counter. 
 
 
 bm-4_3-communicating-events
@@ -53,6 +75,14 @@ story:
 * we create onScoreChange as a function of the application, then it becomes a property. but we need to give it a delta and an index. 
 * we can't pass the index and the delta directly into onScoreChange for some reason, but we can pass it in through an anonymous function, pass this into map, pass this into onScoreChange
 * then change the score, and set the state 
+
+questions:
+*
+*
+*
+*
+
+
 
 bm-4_4-building-the-statistics-component
 * build the statistics component. beware, anytime you do a table in a react component, it requires you to add a tbody and a thead
