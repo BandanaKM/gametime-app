@@ -35,3 +35,42 @@ bm-3_3-updating state
 bm-4_2-change-back-into-stateless-component
 * change counter back to a statless component
 * remove all the state methods from here, including the initial score that is being passed from props. 
+
+
+Key Takeaways:
+
+1. What is the structure of a stateful component?
+
+class
+  proptype
+function 
+function 
+render
+  return 
+ReactDom.render 
+
+
+2. How do you require data of a particular shape?
+
+var Application = React.createClass({
+  propTypes: {
+    title: React.PropTypes.string, 
+    players: React.PropTypes.arrayOf(React.PropTypes.shape({
+      name: React.Proptypes.string.isRequired, 
+      score: React.Proptypes.number.isRequired, 
+      id: React.Proptypes.string.isRequired, 
+    }).isRequired,
+    )
+  },
+
+});
+
+* here, remember we do a React.PropTypes.arrayOf and pass in a React.PropTypes.shape
+
+
+3. What is the getDefaultProps function?
+
+* this returns an object with the default props of this class. another component lifecyle method. 
+
+
+4. Why should players be props? because we'll be able to change the number of players as well as change the information within a player, like their score. 

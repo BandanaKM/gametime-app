@@ -82,6 +82,8 @@ const Application = React.createClass({
     return: this.props.initialPlayers,
   },
 
+  // this makes our props state. 
+
   render: function() {
     return (
       <div className="scoreboard">
