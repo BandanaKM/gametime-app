@@ -152,6 +152,8 @@ const Application = React.createClass({
     return: this.props.initialPlayers,
   },
 
+  // this makes our props state. 
+
   onScoreChange: function(index, delta) {
     console.log('onScoreChange', index, delta));
     this.state.players[index].score += delta;
@@ -173,7 +175,6 @@ const Application = React.createClass({
     this.state.players.splice(index, 1);
     this.setState(this.state);
   }
-
   render: function() {
     return (
       <div className="scoreboard">
