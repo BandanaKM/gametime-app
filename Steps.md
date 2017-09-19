@@ -100,6 +100,7 @@ bm-4_5-adding-players-to-the-scoreboard
 * finally, our last step here is to pass this up to our application saying that we have added a player. 
 
 
+
 bm-5-1-stopwatch-design
 * stopwatch ocmponenet, allows us to count seconds, and start stop, start and reset. 
 * make the timer, a simple counter in seconds. 
@@ -126,3 +127,45 @@ bm-5-4
 * in a real world, we'll use something to precompile before we deploy
 * webpack, compile our JSX and profile a module system like in Node. 
 
+
+
+
+
+
+Key Takeaways:
+
+1. What is the structure of a stateful component?
+
+class
+  proptype
+function 
+function 
+render
+  return 
+ReactDom.render 
+
+
+2. How do you require data of a particular shape?
+
+var Application = React.createClass({
+  propTypes: {
+    title: React.PropTypes.string, 
+    players: React.PropTypes.arrayOf(React.PropTypes.shape({
+      name: React.Proptypes.string.isRequired, 
+      score: React.Proptypes.number.isRequired, 
+      id: React.Proptypes.string.isRequired, 
+    }).isRequired,
+    )
+  },
+
+});
+
+* here, remember we do a React.PropTypes.arrayOf and pass in a React.PropTypes.shape
+
+
+3. What is the getDefaultProps function?
+
+* this returns an object with the default props of this class. another component lifecyle method. 
+
+
+4. Why should players be props? because we'll be able to change the number of players as well as change the information within a player, like their score. 
